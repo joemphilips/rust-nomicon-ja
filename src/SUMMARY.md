@@ -30,7 +30,7 @@
 	* [Drop Flags](drop-flags.md)
 	* [Unchecked](unchecked-uninit.md)
 * [Ownership Based Resource Management](obrm.md)
-	* [Constructors](constructors.md)
+	* [コンストラクタ](constructors.md)
 	* [Destructors](destructors.md)
 	* [Leaking](leaking.md)
 * [Unwinding](unwinding.md)

@@ -1,7 +1,12 @@
-# Constructors
+<!-- # Constructors -->
+# コンストラクタ
 
+<!--
 There is exactly one way to create an instance of a user-defined type: name it,
 and initialize all its fields at once:
+-->
+ユーザー定義型のインスタンスを作成する方法はたったひとつしかありません。名前を
+つけて、全てのフィールドを同時に初期化するのです。
 
 ```rust
 struct Foo {
@@ -22,9 +27,12 @@ let bar = Bar::X(0);
 let empty = Unit;
 ```
 
+<!--
 That's it. Every other way you make an instance of a type is just calling a
 totally vanilla function that does some stuff and eventually bottoms out to The
 One True Constructor.
+-->
+それだけです。
 
 Unlike C++, Rust does not come with a slew of built-in kinds of constructor.
 There are no Copy, Default, Assignment, Move, or whatever constructors. The
@@ -33,7 +41,7 @@ reasons for this are varied, but it largely boils down to Rust's philosophy of
 
 Move constructors are meaningless in Rust because we don't enable types to
 "care" about their location in memory. Every type must be ready for it to be
-blindly memcopied to somewhere else in memory. This means pure on-the-stack-but-
+blindly memcopied to somewhere else in memory. This means pure on-the-stack-but
 still-movable intrusive linked lists are simply not happening in Rust (safely).
 
 Assignment and copy constructors similarly don't exist because move semantics
